@@ -13,11 +13,14 @@ export type GitHub = {
 
 export class GithubClient {
   static getReposUrl(nickname: string): Promise<string> {
-    return new Promise((resolve, reject) => {
-      resolve(getReposUrlByNickname(nickname).then());
-      reject(getReposUrlByNickname(nickname)).catch(Error("shit"));
-    });
     // You code goes here
+    return getReposUrlByNickname(nickname)
+      .then((userData) => {
+        return userData.repos_url;
+      })
+      .catch((error) => {
+        throw error;
+      });
   }
 
   static getRepos() {

@@ -1,4 +1,4 @@
 /* global db */
 
 // write your MongoDB shell command here
-db.createCollection("worldAtlas");
+db.worldAtlas.findOne({ name: "Iceland" });

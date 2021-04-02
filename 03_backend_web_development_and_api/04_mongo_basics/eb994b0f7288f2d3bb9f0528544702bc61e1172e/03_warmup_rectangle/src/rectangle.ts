@@ -1,10 +1,10 @@
 export function rectangle(width: number, height: number): string {
-  let display: string;
-  for (const i = 0; i < width; i++) {
-    for (const j = 0; j < height; j++) {
-      display += "*";
+  let rectangle: string = "";
+  for (let i = 0; i < height; i++) {
+    for (let j = 0; j < width; j++) {
+      rectangle += "*";
     }
-    display += "\n";
+    rectangle += "\n";
   }
-  return test;
+  return rectangle;
 }

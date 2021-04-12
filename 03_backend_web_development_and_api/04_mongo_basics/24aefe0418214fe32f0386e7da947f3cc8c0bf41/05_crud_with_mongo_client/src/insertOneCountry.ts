@@ -1,5 +1,12 @@
 import * as mongo from "mongodb";
 
-export function insertOneCountry() {
-  // code your function here
+const france = { name: "France", capital: "Paris", continent: "Europe" };
+
+export function insertOneCountry(db: mongo.Db): Promise<string> | void {
+  return db
+    .collection("worldAtlas")
+    .insertOne(france)
+    .then((test) => {
+      return test;
+    });
 }

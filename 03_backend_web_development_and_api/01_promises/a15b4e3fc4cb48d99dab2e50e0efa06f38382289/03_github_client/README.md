@@ -29,6 +29,14 @@ In this file you also have the `Repo` type you'll need for your client's functio
 - Must use the `getOneRepoInfos` function that takes an `url` as its argument.
 - Must return the repository's data.
 
+// printRepos
+// Must take an array pf repositories as an argument.
+// Must return the array of repositories.
+// Must use 'console.log' to print the list of repositories in the following format:
+// 1 - nameOfFirstFolder
+// 2 - nameOfSecondFodler
+// ...
+
 ### `printRepository`
 
 - Must take a repository as a parameter.

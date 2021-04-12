@@ -120,13 +120,9 @@ describe("Tree class", () => {
     it("should have an abstract method called isAlive.", async (done) => {
       expect.assertions(1);
 
-      const studentCode = await helpers.readCode(
-        path.resolve(__dirname, "../src/Tree.ts")
-      );
+      const studentCode = await helpers.readCode(path.resolve(__dirname, "../src/Tree.ts"));
 
-      const isMethodAbstract = studentCode.includes(
-        "abstract isAlive(): boolean"
-      );
+      const isMethodAbstract = studentCode.includes("abstract isAlive(): boolean");
 
       expect(isMethodAbstract).toBe(true);
 
@@ -136,13 +132,9 @@ describe("Tree class", () => {
     it("should have an abstract method called ageOneYear.", async (done) => {
       expect.assertions(1);
 
-      const studentCode = await helpers.readCode(
-        path.resolve(__dirname, "../src/Tree.ts")
-      );
+      const studentCode = await helpers.readCode(path.resolve(__dirname, "../src/Tree.ts"));
 
-      const isMethodAbstract = studentCode.includes(
-        "abstract ageOneYear(): void"
-      );
+      const isMethodAbstract = studentCode.includes("abstract ageOneYear(): void");
 
       expect(isMethodAbstract).toBe(true);
 
@@ -314,7 +306,7 @@ describe("OrangeTree class:", () => {
         for (let age = 50; age < 99; age++) {
           tree.ageOneYear();
         }
-
+        console.log(tree.alive);
         expect(tree.alive).toBe(false);
       });
 

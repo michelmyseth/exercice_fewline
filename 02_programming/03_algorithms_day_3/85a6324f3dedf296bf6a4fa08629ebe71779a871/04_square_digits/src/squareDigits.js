@@ -9,16 +9,14 @@
 }*/
 
 function squareDigits(nb) {
-  if (Number.isInteger(nb)) {
-    if(nb === 9129)
-      return 811481;
-    else
-      return nb * nb;
-  }
-  else
-    throw "error";
+  return parseInt(
+    nb
+      .toString()
+      .split("")
+      .map((number) => String(parseInt(number) * parseInt(number)))
+      .join(" "),
+  );
 }
 
 // Leave the line below for tests to work
 module.exports = squareDigits;
-

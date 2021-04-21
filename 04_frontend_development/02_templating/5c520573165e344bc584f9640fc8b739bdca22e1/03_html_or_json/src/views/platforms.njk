@@ -1,0 +1,12 @@
+{% extends "layout.njk" %} {% block content %}
+<h2>PLATFORMS</h2>
+<ul>
+  {% for platform in platforms %}
+  <img src="{{ platform.cover }}" alt="" />
+
+  <li>
+    <a href="platforms/{{ platform.slug }}">{{ platform.name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

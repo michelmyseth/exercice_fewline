@@ -1,0 +1,19 @@
+{% extends "layout.njk" %} {% block content %}
+<div class="d-flex flex-wrap">
+  <h2>PLATFORMS</h2>
+  <ul>
+    {% for platform in platforms %}
+
+    <li>
+      <div class="card" style="width: 18rem">
+        <img src="{{ platform.cover }}" class="img-thumbnail" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ platform.name }}</h5>
+          <a href="platforms/{{ platform.slug }}" class="btn btn-warning">PAY TO GO</a>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

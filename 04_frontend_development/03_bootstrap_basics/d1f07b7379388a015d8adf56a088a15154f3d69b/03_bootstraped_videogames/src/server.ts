@@ -5,11 +5,12 @@ import * as nunjucks from "nunjucks";
 
 const app = express();
 
-app.use("/assets", express.static("assets"));
-nunjucks.configure("./src/views", {
+nunjucks.configure("./views", {
   autoescape: true,
   express: app,
 });
+
+app.use("/assets", express.static("assets"));
 
 app.set("view engine", "njk");
 
@@ -52,6 +53,13 @@ export function makeApp(gameModel: GameModel): core.Express {
     });
   });
 
+  app.get("/", (request, response) => {
+    if (clientWantsJson(request)) {
+      response.status(400).json({ error: "Wrong resource" });
+    } else {
+      response.render("home");
+    }
+  });
   app.get("/*", (request, response) => {
     if (clientWantsJson(request)) response.status(400).json({ error: "Wrong resource" });
     else response.render("not-found");

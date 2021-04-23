@@ -1,0 +1,23 @@
+{% extends "layout.njk" %} {% block content %}
+
+<div class="container-fluid"><h2>games</h2></div>
+<div class="container">
+  <div class="row row-cols-2 row-cols-sm-4 row-cols-md-6 g-4">
+    {% for game in games %}
+
+    <div class="col">
+      <div class="card border-secondary mb-3" style="max-width: 18rem">
+        <img src="{{ game.cover }}" class="img-thumbnail" alt="..." />
+        <div class="card-body">
+          <p class="text-center">{{ game.name }}</p>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="/games/{{ game.slug }}" class="btn btn-warning">BUY ME</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

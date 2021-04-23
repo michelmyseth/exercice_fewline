@@ -1,0 +1,22 @@
+{% extends "layout.njk" %} {% block content %}
+
+<div class="container-fluid"><h2>Game for platform</h2></div>
+<div class="container">
+  <div class="row row-cols-sm-2 row-cols-md-4 row-cols-lg-6 g-4">
+    {% for platform in gamesForPlatform %}
+
+    <div class="col">
+      <div class="card">
+        <img src="{{ platform.cover }}" class="img-thumbnail" alt="..." />
+        <div class="card-body">
+          <p class="text-center">{{ platform.name }}</p>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="/games/{{ game.slug }}" class="btn btn-info">More info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

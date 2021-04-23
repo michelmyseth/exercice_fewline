@@ -1,0 +1,26 @@
+li {
+  list-style: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Karantina:wght@300;400&family=Source+Code+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Karantina:wght@300;400&display=swap");
+h2 {
+  color: white;
+  font-family: "Karantina", cursive;
+}
+
+h5 {
+  font-family: "Source Code Pro", monospace;
+}
+
+p {
+  font-family: "Righteous", cursive;
+}
+#game-card {
+  display: block;
+  margin: auto;
+}
+#resume {
+  font-family: "Righteous", cursive;
+}

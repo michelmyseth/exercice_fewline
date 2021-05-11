@@ -1,10 +1,10 @@
 import React from "react";
-import zelda from "../../../data/zelda";
 
-const CardFooter = () => {
+const CardFooter = (props) => {
+  const { slug } = props;
   return (
     <>
-      <a href={"games/" + zelda.slug}></a>
+      <a href={"games/" + slug.slug}></a>
     </>
   );
 };

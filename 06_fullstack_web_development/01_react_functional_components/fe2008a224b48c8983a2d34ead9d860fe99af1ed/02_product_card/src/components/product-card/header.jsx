@@ -1,11 +1,16 @@
 import React from "react";
-import zelda from "../../../data/zelda";
 
-const CardHeader = () => {
+const CardHeader = (props) => {
+  const { slug } = props;
   return (
     <>
-      <h1>{props.name}</h1>
-      <img src={zelda.platforms.map((platform) => platform.platform_logo.url)} />
+      <h1>{slug.name}</h1>
+
+      {slug.platforms.map((platform, index) => (
+        <div key={index}>
+          <img src={platform.platform_logo.url} />
+        </div>
+      ))}
     </>
   );
 };

@@ -1,17 +1,17 @@
 import React from "react";
-import zelda from "../../../data/zelda";
 
-const CardBody = () => {
+const CardBody = (props) => {
+  const { slug } = props;
   const [display, setUse] = React.useState(true);
 
   return (
     <>
-      <img src={zelda.cover.url} />
-      <p>{zelda.first_release_date}</p>
-      <p>{zelda.genres.map((genre) => genre.name)}</p>
-      <p>{zelda.summary}</p>
+      <img src={slug.cover.url} />
+      <p>{slug.first_release_date}</p>
+      <p>{slug.genres.map((genre) => genre.name)}</p>
+      <p>{slug.summary}</p>
       {display
-        ? zelda.screenshots
+        ? slug.screenshots
             .map((screenshot, index) => {
               return (
                 <div key={index}>

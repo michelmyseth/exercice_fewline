@@ -1,10 +1,16 @@
 import React from "react";
+import CardBody from "./body";
+import CardFooter from "./footer";
 import CardHeader from "./header";
 
 const ProductCard = (props) => {
+  const { product } = props;
+
   return (
     <>
-      <CardHeader />
+      <CardHeader slug={product} />
+      <CardBody slug={product} />
+      <CardFooter slug={product} />
     </>
   );
 };
